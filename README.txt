@@ -1,3 +1,5 @@
+JavaScript gallery which can work with hundreds of photos.
+
 kGallery is a gallery written on JavaScript using jQuery library.
 
 Advantage of this gallery is ability to work stable with hundreds of pictures or with big pictures, without freezing brouser. This effect is achieved by retrieving the list of images from external source (JSON or XML) and downloading pictures gradually until slideshow is playing, not all in ones.
@@ -29,6 +31,8 @@ Documentation is coming soon. Now you can check all parameters in "defaults" obj
 
 
 По русски (in Russian)
+
+JavaScript галерея, которая может работать с сотнями фотографий
 
 kGallery - это галерея написанная на JavaScript с использованием библиотеки jQuery.
 
