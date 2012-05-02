@@ -1,0 +1,18 @@
+	.kSlideshowPrev{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-next-rtl.png');
+	}
+	.kSlideshowPlay{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-play-ltr.png');
+	}
+	.kSlideshowPause{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-pause.png');
+	}
+	.kSlideshowNext{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-next-ltr.png');
+	}
+	.kThumbnailsWrapper .kThumbnailsNextPage{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-forward-ltr.png');
+	}
+	.kThumbnailsWrapper .kThumbnailsPrevPage{
+		background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/for-developers/kgallery/kgallery-demo/i/gtk-media-forward-rtl.png');
+	}

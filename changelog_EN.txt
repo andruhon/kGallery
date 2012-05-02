@@ -1,0 +1,20 @@
+01.04.2012
+	kSlideshow 1.1
+		1. nextAttempts option is added. If slide picture is not loaded yet kSlideshow prevents automatic flipping to the next slide {nextAttempts} times
+		2. reset playback interval when slides is flipping, to prevent flipping of slides immediately after displaying
+		3. Bug, when you can call play method several times and accelerate playback, is remmoved
+		4. beforeAnimation event is added
+		5. playToggle now returns text status of playback
+
+25.04.2012
+	kSlideshow 1.12
+		1. Method getOptions is added, allows to get megred options from outside of kSlideshow
+		2. event onLoadingError is added, it fires if error of loading data (url) is happened
+
+02.05.2012
+	kGallery 1.04
+		1. slideshow playback interval is resets when thumbnails next and prev buttons clicked. It is done to prevent sliding of thumbnails until user is flipping pages of thumbnails
+	kSlideshow 1.14
+		1. enableAlt option is added. If enableAlt is TRUE all tags and quotes removed from item.title, this string adds as alt attribute to according gallery image
+	kThumbnailPicker 1.06
+		1. nextOrPrev bolean parameter is added to beforeShow and afterShow events, TRUE is passed if this events fired as consequence of next and prev methods
