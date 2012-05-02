@@ -1,4 +1,4 @@
-JavaScript gallery which can work with hundreds of photos.
+JavaScript gallery which can efficiently work with hundreds of photos.
 
 kGallery is a gallery written on JavaScript using jQuery library.
 
@@ -32,7 +32,7 @@ Documentation is coming soon. Now you can check all parameters in "defaults" obj
 
 По русски (in Russian)
 
-JavaScript галерея, которая может работать с сотнями фотографий
+JavaScript галерея, которая может эффективно работать с сотнями фотографий
 
 kGallery - это галерея написанная на JavaScript с использованием библиотеки jQuery.
 
