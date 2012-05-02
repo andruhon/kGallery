@@ -7,26 +7,29 @@ Nearest analog is dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.S
 kGallery includes kSlideshow and kThumbnailPicker componnents, which can used independently.
 
 Examples of usage:
-1.
-2.
-3.
+1. Typical usage - http://kopolo.ru/for-developers/kgallery/demo/example_typical.html
+2. Slideshow only - http://kopolo.ru/for-developers/kgallery/demo/example_slideshow_only.html
+3. Thumbnails only - http://kopolo.ru/for-developers/kgallery/demo/example_thumbnails_only.html
+4. Gallery with vertical previews - http://kopolo.ru/for-developers/kgallery/demo/example_vertical.html
+
+One real life example: http://foto-dv.ru/en/
 
 
 Documentation is coming soon. Now you can check all parameters in "defaults" object of every componnent, all variables and methods are well commented.
 
-По русски (in Russian)
+РџРѕ СЂСѓСЃСЃРєРё (in Russian)
 
-kGallery - это галерея написанная на JavaScript с использованием библиотеки jQuery.
+kGallery - СЌС‚Рѕ РіР°Р»РµСЂРµСЏ РЅР°РїРёСЃР°РЅРЅР°СЏ РЅР° JavaScript СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј Р±РёР±Р»РёРѕС‚РµРєРё jQuery.
 
-Преимущество kGallery заключается в том, что галерея стабильно работает с сотнями изображений, либо с большими изображениями.
-Эффект достигается за счет того, что список изображений и их миниатюр запрашивается из внешнего источника в виде JSON или XML, изображения загружаются не все сразу, а постепенно, по мере воспроизведения слайдшоу.
+РџСЂРµРёРјСѓС‰РµСЃС‚РІРѕ kGallery Р·Р°РєР»СЋС‡Р°РµС‚СЃСЏ РІ С‚РѕРј, С‡С‚Рѕ РіР°Р»РµСЂРµСЏ СЃС‚Р°Р±РёР»СЊРЅРѕ СЂР°Р±РѕС‚Р°РµС‚ СЃ СЃРѕС‚РЅСЏРјРё РёР·РѕР±СЂР°Р¶РµРЅРёР№, Р»РёР±Рѕ СЃ Р±РѕР»СЊС€РёРјРё РёР·РѕР±СЂР°Р¶РµРЅРёСЏРјРё.
+Р­С„С„РµРєС‚ РґРѕСЃС‚РёРіР°РµС‚СЃСЏ Р·Р° СЃС‡РµС‚ С‚РѕРіРѕ, С‡С‚Рѕ СЃРїРёСЃРѕРє РёР·РѕР±СЂР°Р¶РµРЅРёР№ Рё РёС… РјРёРЅРёР°С‚СЋСЂ Р·Р°РїСЂР°С€РёРІР°РµС‚СЃСЏ РёР· РІРЅРµС€РЅРµРіРѕ РёСЃС‚РѕС‡РЅРёРєР° РІ РІРёРґРµ JSON РёР»Рё XML, РёР·РѕР±СЂР°Р¶РµРЅРёСЏ Р·Р°РіСЂСѓР¶Р°СЋС‚СЃСЏ РЅРµ РІСЃРµ СЃСЂР°Р·Сѓ, Р° РїРѕСЃС‚РµРїРµРЅРЅРѕ, РїРѕ РјРµСЂРµ РІРѕСЃРїСЂРѕРёР·РІРµРґРµРЅРёСЏ СЃР»Р°Р№РґС€РѕСѓ.
 
-Ближайший аналог dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.SlideShow), однако kGallery не требует подключения к сайту мегабайтов кода библиотеки dojo и лучше настраивается.
+Р‘Р»РёР¶Р°Р№С€РёР№ Р°РЅР°Р»РѕРі dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.SlideShow), РѕРґРЅР°РєРѕ kGallery РЅРµ С‚СЂРµР±СѓРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє СЃР°Р№С‚Сѓ РјРµРіР°Р±Р°Р№С‚РѕРІ РєРѕРґР° Р±РёР±Р»РёРѕС‚РµРєРё dojo Рё Р»СѓС‡С€Рµ РЅР°СЃС‚СЂР°РёРІР°РµС‚СЃСЏ.
 
-kGallery включает компоненты kSlideshow и kThumbnailPicker, которые могут быть использованы самостоятельно.
+kGallery РІРєР»СЋС‡Р°РµС‚ РєРѕРјРїРѕРЅРµРЅС‚С‹ kSlideshow Рё kThumbnailPicker, РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅС‹ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ.
 
-Примеры использования:
+РџСЂРёРјРµСЂС‹ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
 http://kopolo.ru/for-developers/kgallery/demo/
 
-Документация:
+Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ:
 http://kopolo.ru/for-developers/kgallery/docs/

@@ -8,7 +8,7 @@
  * @requires kThumbnailPicker > 0.8
  *
  * Dual licensed under MIT and GPL 2+ licenses
- * http://kopolo.ru/for-developers/kgallery/_license/
+ * http://kopolo.ru/en/for-developers/kgallery/_license/
  */
 (function($) {
    kGallery = function(new_options) {
