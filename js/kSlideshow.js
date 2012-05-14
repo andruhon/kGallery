@@ -5,7 +5,7 @@
  * TODO: +0.01 to add possibility of CSS class changing for control elements and title on mouseover (like hover) 
  * FIXME: +0.01 escape quotes before setting alt and title attributes for picture
  *
- * @version 1.14 / 02.05.2012
+ * @version 1.15 / 14.05.2012
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
  *
@@ -15,7 +15,7 @@
 (function($) {
     kSlideshow = function(new_options) {
                 
-        kSlideshowVersion = '1.14';
+        kSlideshowVersion = '1.15';
         
         /* default options */
         var defaults = {
@@ -194,9 +194,10 @@
                 
                 /**
                  * Function which called on error of parsing the data
+                 * See params explanations on http://api.jquery.com/jQuery.ajax/
                  * var function
                  */
-                onLoadingError: function (){}
+                onLoadingError: function (jqXHR, textStatus, errorThrown){}
         };
         
         /**
@@ -272,7 +273,7 @@
                             instance.init ();
                             options.afterInit();
                         };
-                    },error: function () {options.onLoadingError();},
+                    },error: function (jqXHR, textStatus, errorThrown) {options.onLoadingError(jqXHR, textStatus, errorThrown);},
                     dataType: options.dataType
                 });
             };
