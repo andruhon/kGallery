@@ -11,18 +11,20 @@ kGallery includes kSlideshow and kThumbnailPicker componnents, which can used in
 
 Examples of usage:
 1. Typical usage
-http://kopolo.ru/for-developers/kgallery/demo/example_typical.html
+example_typical.html
 
 2. Slideshow only
-http://kopolo.ru/for-developers/kgallery/demo/example_slideshow_only.html
+example_slideshow_only.html
 
 3. Thumbnails only
-http://kopolo.ru/for-developers/kgallery/demo/example_thumbnails_only.html
+example_thumbnails_only.html
 
 4. Gallery with vertical previews
-http://kopolo.ru/for-developers/kgallery/demo/example_vertical.html
+example_vertical.html
 
 One real life example: http://foto-dv.ru/en/
+
+Run this files from web-server with http, not locally.
 
 
 Documentation is coming soon. Now you can check all parameters in "defaults" object of every componnent, all variables and methods are well commented.
@@ -43,9 +45,3 @@ kGallery - это галерея написанная на JavaScript с исп�
 Ближайший аналог dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.SlideShow), однако kGallery не требует подключения к сайту мегабайтов кода библиотеки dojo и лучше настраивается.
 
 kGallery включает компоненты kSlideshow и kThumbnailPicker, которые могут быть использованы самостоятельно.
-
-Примеры использования:
-http://kopolo.ru/for-developers/kgallery/demo/
-
-Документация:
-http://kopolo.ru/for-developers/kgallery/docs/
