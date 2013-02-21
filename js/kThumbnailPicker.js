@@ -9,7 +9,7 @@
  * @requires jQuery JavaScript Library > v1.3.2
  *
  * Dual licensed under MIT and GPL 2+ licenses
- * http://kopolo.ru/en/for-developers/kgallery/_license/
+ * https://github.com/andruhon/kGallery
  */
 (function($) {
     kThumbnailPicker = function(new_options) {
