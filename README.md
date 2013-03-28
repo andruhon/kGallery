@@ -13,7 +13,7 @@ Nearest analog is dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.S
 1. Typical usage http://kopolo.ru/for-developers/kgallery/demo/example_typical.html
 2. Slideshow only http://kopolo.ru/for-developers/kgallery/demo/example_slideshow_only.html
 3. Thumbnails only http://kopolo.ru/for-developers/kgallery/demo/example_thumbnails_only.html
-4. Gallery with http://kopolo.ru/for-developers/kgallery/demo/vertical previews example_vertical.html
+4. Gallery with vertical previews http://kopolo.ru/for-developers/kgallery/demo/example_vertical.html
 
 One real life example: http://foto-dv.ru/en/
 

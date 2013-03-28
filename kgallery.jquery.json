@@ -1,0 +1,33 @@
+{
+	"name": "kgallery",
+	"title": "kgallery",
+	"version": "2.8.1",
+	"description": "JavaScript gallery which can efficiently work with hundreds of photos.",
+	"author": {
+		"name": "Andrew Kondratev",
+		"url": "http://kopolo.ru/en/"
+	},
+	"maintainers": [{
+		"name": "Andrew Kondratev",
+		"url": "https://github.com/andruhon",
+		"email": "andr@kopolo.ru"
+	}],
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://www.opensource.org/licenses/mit-license.php"
+	},{
+		"type": "GPL",
+		"url": "http://www.gnu.org/licenses/gpl.html"
+	}],
+	"homepage": "https://github.com/andruhon/kGallery",
+	"bugs": "https://github.com/andruhon/kGallery/issues",
+	"demo": "http://kopolo.ru/for-developers/kgallery/demo/example_typical.html",
+	"dependencies": {
+		"jquery": ">=1.3.2"
+	},
+	"keywords": [
+		"gallery",
+		"image",
+		"preload"
+	]
+}
