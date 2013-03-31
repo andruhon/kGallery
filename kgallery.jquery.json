@@ -21,7 +21,8 @@
 	}],
 	"homepage": "https://github.com/andruhon/kGallery",
 	"bugs": "https://github.com/andruhon/kGallery/issues",
-	"demo": "http://kopolo.ru/for-developers/kgallery/demo/example_typical.html",
+	"demo": "http://kopolo.ru/for_webmasters/kgallery/example_typical.html",
+	"docs": "http://kopolo.ru/for_webmasters/kgallery/kgallery_docs.html",
 	"dependencies": {
 		"jquery": ">=1.3.2"
 	},
