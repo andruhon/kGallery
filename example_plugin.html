@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Plugin usage</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="css/kGallery.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="css/kGallery_ie6.css"/>
+<![endif]-->
+<style>
+#gallery-wrapper{
+	height: 400px; width: 400px; text-align: center;
+}
+.kSlideshowWrapper, .kSlideshowItemDiv{
+	width: 400px;
+	height: 267px;
+}
+.kThumbnailsInnerWrapper{
+	height: 80px;
+	width: 324px;
+}
+.kThumbnailsWrapper{
+	width: 324px;
+	height: 80px;
+	margin: 10px auto 0 auto;
+}
+.kThumbnailsPage{
+	width: 324px;
+	text-align: left;
+}
+.kThumbnailsPage img{
+	padding: 1px;
+	border: 1px solid black;
+	margin: 2px;
+}
+.kThumbnailsPage .selectedThumbnail{
+	border-color: #aaaaff;
+}
+.kSlideshowItemDiv img{
+	z-index: 400;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/kGallery-full.min.js"></script>
+<!--script type="text/javascript" src="js/kSlideshow.js"></script>
+<script type="text/javascript" src="js/kThumbnailPicker.js"></script>
+<script type="text/javascript" src="js/kGallery.js"></script-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#gallery-wrapper').kGallery('files/gallery.json');
+});
+</script>
+
+<h2>Plugin usage of kGallery</h2>
+<div id="gallery-wrapper">
+
+</div>
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 /**
  * kGallery
  *
- * @version 1.04 / 02.05.2012
+ * @version 1.0.5 / 31.03.2013
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
  * @requires kSlideshow > 0.8
@@ -13,14 +13,14 @@
 (function($) {
    kGallery = function(new_options) {
        
-       kGalleryVersion = '1.04';
+       kGalleryVersion = '1.0.5';
        
        /* default options */
        var defaults = {
                /**
                 * gallery wrapper
                 * If collection of elements given, displays the same slideshow obeying same commands in all wrappers
-                * Call new kSlideshow to create independent slideshow                 * 
+                * Call new kSlideshow to create independent slideshow
                 * var string|$.object
                 */
                wrapper: '#gallery-wrapper',
@@ -244,3 +244,13 @@
        return instance;
    };
 })(jQuery);
+
+/**
+ * Plugin
+ */
+jQuery.fn.kGallery = function(url) {    
+    kGallery({
+        wrapper: jQuery(this),
+        url: url
+    });
+};
