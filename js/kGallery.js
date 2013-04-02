@@ -1,7 +1,7 @@
 /**
  * kGallery
  *
- * @version 1.0.5 / 31.03.2013
+ * @version 1.0.6 / 02.04.2013
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
  * @requires kSlideshow > 0.8
@@ -13,7 +13,7 @@
 (function($) {
    kGallery = function(new_options) {
        
-       kGalleryVersion = '1.0.5';
+       kGalleryVersion = '1.0.6';
        
        /* default options */
        var defaults = {
@@ -247,10 +247,19 @@
 
 /**
  * Plugin
+ * @param string|object - url|options
  */
-jQuery.fn.kGallery = function(url) {    
-    kGallery({
-        wrapper: jQuery(this),
-        url: url
-    });
+jQuery.fn.kGallery = function(urlOrOptions) {
+    var options = {
+        wrapper: jQuery(this)
+    };
+    if (typeof urlOrOptions === 'string') {
+        /* string is supposed to be url */
+        options.url = urlOrOptions;
+    } else if (typeof urlOrOptions === 'object') {
+        /* options object */
+        options = urlOrOptions;
+        options.wrapper = jQuery(this);
+    }
+    kGallery(options);
 };

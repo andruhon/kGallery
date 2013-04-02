@@ -1,10 +1,10 @@
 /**
  * kThumbnailPicker
  *
- * TODO: +0.01 to add isCircular option, which should toggle repeating of gallery slideshow
- * FIXME: +0.01 empty page is displayed when clicking on one direction and immediately clicking in other direction until animation performs
+ * TODO: +0.0.1 to add isCircular option, which should toggle repeating of gallery slideshow
+ * FIXME: +0.0.1 empty page is displayed when clicking on one direction and immediately clicking in other direction until animation performs
  *
- * @version 1.06 / 02.05.2012
+ * @version 1.0.6 / 02.05.2012
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
  *
@@ -14,7 +14,7 @@
 (function($) {
     kThumbnailPicker = function(new_options) {
 
-        kThumbnailPickerVersion = '1.06';
+        kThumbnailPickerVersion = '1.0.6';
         
         /*default options*/
         var defaults = {

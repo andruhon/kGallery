@@ -51,9 +51,20 @@
 <script type="text/javascript" src="js/kGallery.js"></script-->
 
 <script type="text/javascript">
+
+
 $(document).ready(function() {
-	$('#gallery-wrapper').kGallery('files/gallery.json');
+    //initializing plugin with url string
+    $('#gallery-wrapper').kGallery('files/gallery.json');
+    
+    /*//initializing plugin with options object
+    $('#gallery-wrapper').kGallery({
+        url:'files/gallery.json',
+        startItem: 2
+    });*/
 });
+
+
 </script>
 
 <h2>Plugin usage of kGallery</h2>
