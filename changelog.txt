@@ -1,0 +1,80 @@
+17.05.2013
+    kGallery 1.1.0
+        1. destroy function added
+        2. Now you cannot initialize kGallery without url option
+        3. $('#selector').kGallery; or kGallery('#selector') now will return current instance of wrapper with #selector if this instance exists, it returns FALSE orhterwise
+    kThumbnailPicker 1.2.0
+        destroy function added
+    kThumbnailPicker 1.1.0
+        destroy function added
+
+31.03.2013
+    kGallery 1.0.5
+    Adding jQuery pluging usage
+
+14.05.2012
+    kSlideshow 1.15
+    jqXHR, textStatus, errorThrown parameters added to onLoadingError method
+
+02.05.2012
+    kGallery 1.04
+        1. slideshow playback interval is resets when thumbnails next and prev buttons clicked. It is done to prevent sliding of thumbnails until user is flipping pages of thumbnails
+    kSlideshow 1.14
+        1. enableAlt option is added. If enableAlt is TRUE all tags and quotes removed from item.title, this string adds as alt attribute to according gallery image
+    kThumbnailPicker 1.06
+        1. nextOrPrev bolean parameter is added to beforeShow and afterShow events, TRUE is passed if this events fired as consequence of next and prev methods
+
+25.04.2012
+    kSlideshow 1.12
+        1. Method getOptions is added, allows to get megred options from outside of kSlideshow
+        2. event onLoadingError is added, it fires if error of loading data (url) is happened
+
+01.04.2012
+    kSlideshow 1.1
+        1. nextAttempts option is added. If slide picture is not loaded yet kSlideshow prevents automatic flipping to the next slide {nextAttempts} times
+        2. reset playback interval when slides is flipping, to prevent flipping of slides immediately after displaying
+        3. Bug, when you can call play method several times and accelerate playback, is remmoved
+        4. beforeAnimation event is added
+        5. playToggle now returns text status of playback
+
+20.11.2010
+    kSlideshow 1.045
+        1. Добавлена возможность отображения описаний для картинок.
+
+25.05.2010
+    kGallery 1.03
+        1. Добавлен метод beforeShow(), позволяющий не переопределять метод beforeShow в kSlideshow
+            Благодаря этому решилась проблема с не добавляемым классом активности к миниатюре
+
+27.05.2010
+    kSlideshow 1.035
+        1. Элементы управления и автопроигрывание не инициализируются, если в слайдшоу только один элемент
+    kThumbnailPicker 1.055
+        1. Элементы управления теперь не показываются, если доступна только одна страница
+
+17.05.2010
+    kThumbnailPicker 1.045
+        1. Исправлен баг в webkit (chrome, safari) - текущая и следующая страница двигались с разной скоростью.
+
+13.05.2010
+    kGallery 1.025
+        1. Добавлена возможность инициализировать элементы управления извне
+    kSlideshow 1.025
+        1. Предзагрузка изображений теперь происходит без специального контейнера, теперь он не возникает в виде точки
+        2. Исправлен баг с инициализацией при отключенном автопроигрывании и отключенных элементах управления
+        3. Добавлена опция afterInit, позволяющая вызвать функцию после инициализации слайдшоу
+        4. Добавлена возможность инициализировать элементы управления извне
+    kThumbnailPicker 1.035
+        1. Предзагрузка изображений теперь происходит без специального контейнера, теперь он не возникает в виде точки
+        2. Исправлен следующий баг: при вертикальном положении и эффекте 'slide' при переключении с последнее страницы на первую,
+            либо наоборот - страница не появлялась.
+        3. Добавлена опция afterInit, позволяющая вызвать функцию после инициализации слайдшоу
+
+
+
+
+
+
+
+
+

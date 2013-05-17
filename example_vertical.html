@@ -12,53 +12,53 @@
 <link rel="stylesheet" type="text/css" href="css/kGallery_ie6.css"/>
 <![endif]-->
 <style>
-	#gallery-wrapper{height: 267px; width: 400px; text-align: center; position: relative;}
-	.kSlideshowWrapper{
-		width: 400px;
-		height: 274px;
-	}
-	.kThumbnailsInnerWrapper{
-		height: 239px;
-		width: 106px;
-	}
-	.kThumbnailsWrapper{
-		width: 106px;
-		height: 239px;
-		margin: 0 auto;
-		position: absolute;
-		top: 18px; right: -120px;
-	}
-	.kThumbnailsPage{
-		width: 106px;
-		height: 239px;
-		text-align: left;
-	}
-	.kThumbnailsPage img{
-		padding: 1px;
-		border: 1px solid black;
-		margin: 2px;
-		background: white;
-	}
-	.kThumbnailsPage .selectedThumbnail{
-		border-color: #aaaaff;
-	}
-	.kSlideshowItemDiv img{
-		z-index: 400;
-	}
-	.kThumbnailsPage .selectedThumbnail {
-		border-color: #AA0000;
-	}
-	.kThumbnailsWrapper .kThumbnailsPrevPage{
-		top: -26px;
-		left: 40px;
-		background: url("i/gtk-media-forward-up.png") no-repeat scroll 0 0 transparent;
-	}
-	.kThumbnailsWrapper .kThumbnailsNextPage{
-		bottom: -24px;
-		top: auto;
-		left: 40px;
-		background: url("i/gtk-media-forward-down.png") no-repeat scroll 0 0 transparent;
-	}
+    #gallery-wrapper{height: 267px; width: 400px; text-align: center; position: relative;}
+    .kSlideshowWrapper{
+        width: 400px;
+        height: 274px;
+    }
+    .kThumbnailsInnerWrapper{
+        height: 239px;
+        width: 106px;
+    }
+    .kThumbnailsWrapper{
+        width: 106px;
+        height: 239px;
+        margin: 0 auto;
+        position: absolute;
+        top: 18px; right: -120px;
+    }
+    .kThumbnailsPage{
+        width: 106px;
+        height: 239px;
+        text-align: left;
+    }
+    .kThumbnailsPage img{
+        padding: 1px;
+        border: 1px solid black;
+        margin: 2px;
+        background: white;
+    }
+    .kThumbnailsPage .selectedThumbnail{
+        border-color: #aaaaff;
+    }
+    .kSlideshowItemDiv img{
+        z-index: 400;
+    }
+    .kThumbnailsPage .selectedThumbnail {
+        border-color: #AA0000;
+    }
+    .kThumbnailsWrapper .kThumbnailsPrevPage{
+        top: -26px;
+        left: 40px;
+        background: url("i/gtk-media-forward-up.png") no-repeat scroll 0 0 transparent;
+    }
+    .kThumbnailsWrapper .kThumbnailsNextPage{
+        bottom: -24px;
+        top: auto;
+        left: 40px;
+        background: url("i/gtk-media-forward-down.png") no-repeat scroll 0 0 transparent;
+    }
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/kGallery-full.min.js"></script>
@@ -66,16 +66,16 @@
 <script type="text/javascript" src="js/kThumbnailPicker.js"></script>
 <script type="text/javascript" src="js/kGallery.js"></script>-->
 <script type="text/javascript">
-	$(document).ready(function() {
-		gallery = kGallery({
-			wrapper: '#gallery-wrapper',
-			url: 'files/gallery.json',
-			startItem: 0,
-			thumbnailPickerOptions: {
-				vertical: true
-			}
-		});
-	});
+    $(document).ready(function() {
+        gallery = kGallery({
+            wrapper: '#gallery-wrapper',
+            url: 'files/gallery.json',
+            startItem: 0,
+            thumbnailPickerOptions: {
+                vertical: true
+            }
+        });
+    });
 </script>
 
 <h2>kGallery with vertical thumbnails scrolling</h2>
