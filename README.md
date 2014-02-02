@@ -16,6 +16,7 @@ Nearest analog is dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.S
 4. Gallery with vertical previews http://kopolo.ru/for_webmasters/kgallery/example_vertical.html
 
 Array as data source:
+
 5. Typical usage http://kopolo.ru/for_webmasters/kgallery/example_typical_array.html
 6. Slideshow only http://kopolo.ru/for_webmasters/kgallery/example_slideshow_only_array.html
 7. Thumbnails only http://kopolo.ru/for_webmasters/kgallery/example_thumbnails_only_array.html
