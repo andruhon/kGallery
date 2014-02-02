@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Typical usage</title>
+<title>Typical usage (dataSource: array)</title>
 </head>
 <body>
 
@@ -54,13 +54,148 @@
 $(document).ready(function() {
     gallery = kGallery({
         wrapper: '#gallery-wrapper',
-        dataSource: 'files/gallery.json',
-        startItem: 0
+        startItem: 0,
+        dataType: 'array',
+        dataSource: [
+            {
+                "large":"files/365_4.jpg",
+                "thumb":"files/previews/365_4.jpg",
+                "title":"First image! + some HTML <a href=\"http://en.wikipedia.org/wiki/HTML\" target=\"_blank\" >HTML</a>"
+            },
+            {
+                "large":"files/365_5.jpg",
+                "thumb":"files/previews/365_5.jpg",
+                "title":"Second image!"
+            },
+            {
+                "large":"files/365_6.jpg",
+                "thumb":"files/previews/365_6.jpg",
+                "title":"Third image!"
+            },
+            {
+                "large":"files/365_8.jpg",
+                "thumb":"files/previews/365_8.jpg",
+                "title":"Fourth image!"
+            },
+            {
+                "large":"files/365_10.jpg",
+                "thumb":"files/previews/365_10.jpg",
+                "title":"Fifth image!"
+            },
+            {
+                "large":"files/365_11.jpg",
+                "thumb":"files/previews/365_11.jpg",
+                "title":"Sixth image!"
+            },
+            {
+                "large":"files/365_12.jpg",
+                "thumb":"files/previews/365_12.jpg",
+                "title":"Seventh image!"
+            },
+            {
+                "large":"files/365_13.jpg",
+                "thumb":"files/previews/365_13.jpg",
+                "title":"Eighth image!"
+            },
+            {
+                "large":"files/365_15.jpg",
+                "thumb":"files/previews/365_15.jpg",
+                "title":"Ninth image!"
+            },
+            {
+                "large":"files/365_17.jpg",
+                "thumb":"files/previews/365_17.jpg",
+                "title":"Tenth image!"
+            },
+            {
+                "large":"files/365_18.jpg",
+                "thumb":"files/previews/365_18.jpg",
+                "title":"Eleventh image!"
+            },
+            {
+                "large":"files/365_19.jpg",
+                "thumb":"files/previews/365_19.jpg",
+                "title":"Twelfth image!"
+            },
+            {
+                "large":"files/365_20.jpg",
+                "thumb":"files/previews/365_20.jpg",
+                "title":"Thirteenth image!"
+            },
+            {
+                "large":"files/365_21.jpg",
+                "thumb":"files/previews/365_21.jpg",
+                "title":"Fourteenth image!"
+            },
+            {
+                "large":"files/365_22.jpg",
+                "thumb":"files/previews/365_22.jpg",
+                "title":"Twelfth image!"
+            },
+            {
+                "large":"files/365_23.jpg",
+                "thumb":"files/previews/365_23.jpg",
+                "title":"Fifteenth image!"
+            },
+            {
+                "large":"files/365_24.jpg",
+                "thumb":"files/previews/365_24.jpg",
+                "title":"Sixteenth image!"
+            },
+            {
+                "large":"files/365_25.jpg",
+                "thumb":"files/previews/365_25.jpg"
+            },
+            {
+                "large":"files/365_26.jpg",
+                "thumb":"files/previews/365_26.jpg"
+            },
+            {
+                "large":"files/365_27.jpg",
+                "thumb":"files/previews/365_27.jpg"
+            },
+            {
+                "large":"files/365_28.jpg",
+                "thumb":"files/previews/365_28.jpg"
+            },
+            {
+                "large":"files/365_30.jpg",
+                "thumb":"files/previews/365_30.jpg"
+            },
+            {
+                "large":"files/365_32.jpg",
+                "thumb":"files/previews/365_32.jpg"
+            },
+            {
+                "large":"files/365_33.jpg",
+                "thumb":"files/previews/365_33.jpg"
+            },
+            {
+                "large":"files/365_35.jpg",
+                "thumb":"files/previews/365_35.jpg"
+            },
+            {
+                "large":"files/365_36.jpg",
+                "thumb":"files/previews/365_36.jpg"
+            },
+            {
+                "large":"files/365_38.jpg",
+                "thumb":"files/previews/365_38.jpg"
+            },
+            {
+                "large":"files/365_39.jpg",
+                "thumb":"files/previews/365_39.jpg"
+            },
+            {
+                "large":"files/365_40.jpg",
+                "thumb":"files/previews/365_40.jpg"
+            }
+        ]
     });
 });
 </script>
 
-<h2>Typical usage of kGallery</h2>
+<h2>Typical usage of kGallery (dataSource: array)</h2>
 <div id="gallery-wrapper">
 
 </div>
@@ -71,7 +206,17 @@ JavaScript
 <div class="javascript"><ol><li class="li1"><div class="de1">$<span class="br0">(</span>document<span class="br0">)</span>.<span class="me1">ready</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div></li>
 <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; gallery <span class="sy0">=</span> kGallery<span class="br0">(</span><span class="br0">{</span></div></li>
 <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; wrapper<span class="sy0">:</span> <span class="st0">'#gallery-wrapper'</span><span class="sy0">,</span></div></li>
-<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; url<span class="sy0">:</span> <span class="st0">'files/gallery.json'</span><span class="sy0">,</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dataType<span class="sy0">:</span> <span class="st0">'array'</span><span class="sy0">,</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dataSource<span class="sy0">:</span> <span class="st0">[{
+                    "large":"img1.jpg",
+                    "thumb":"img1_sml.jpg",
+                    "title":"title!"
+                },
+                {
+                    "large":"img2.jpg",
+                    "thumb":"img2_sml.jpg",
+                    "title":"title2!"
+                }]</span><span class="sy0">,</span></div></li>
 <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; startItem<span class="sy0">:</span> <span class="nu0">0</span></div></li>
 <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></div></li>
 <li class="li1"><div class="de1"><span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></div></li>

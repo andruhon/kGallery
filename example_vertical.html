@@ -60,7 +60,7 @@
         background: url("i/gtk-media-forward-down.png") no-repeat scroll 0 0 transparent;
     }
 </style>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/kGallery-full.min.js"></script>
 <!--<script type="text/javascript" src="js/kSlideshow.js"></script>
 <script type="text/javascript" src="js/kThumbnailPicker.js"></script>
@@ -69,7 +69,7 @@
     $(document).ready(function() {
         gallery = kGallery({
             wrapper: '#gallery-wrapper',
-            url: 'files/gallery.json',
+            dataSource: 'files/gallery.json',
             startItem: 0,
             thumbnailPickerOptions: {
                 vertical: true

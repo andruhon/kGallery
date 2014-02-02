@@ -1,3 +1,14 @@
+02.02.2014
+    kGallery 1.1.1
+        1. url option replaced to dataSource
+        2. dataType: array option added
+    kThumbnailPicker 1.2.1
+        1. url option replaced to dataSource
+        2. dataType: array option added
+    kThumbnailPicker 1.1.1
+        1. url option replaced to dataSource
+        2. dataType: array option added
+
 17.05.2013
     kGallery 1.1.0
         1. destroy function added

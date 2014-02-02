@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Thumbnails only (dataSource: array)</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="css/kGallery.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="../kgallery-demo/css/kGallery_ie6.css"/>
+<![endif]-->
+<style>
+    #gallery-wrapper{height: 400px; width: 400px; text-align: center;}
+    .kSlideshowWrapper{
+        width: 400px;
+        height: 274px;
+    }
+    .kThumbnailsInnerWrapper{
+        height: 80px;
+        width: 324px;
+    }
+    .kThumbnailsWrapper{
+        width: 324px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .kThumbnailsPage{
+        width: 324px;
+        text-align: left;
+    }
+    .kThumbnailsPage img{
+        padding: 1px;
+        border: 1px solid black;
+        margin: 2px;
+    }
+    .kThumbnailsPage .selectedThumbnail{
+        border-color: #aaaaff;
+    }
+    .kSlideshowItemDiv img{
+        z-index: 400;
+    }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--script type="text/javascript" src="js/kGallery-full.min.js"></script-->
+<script type="text/javascript" src="js/kSlideshow.js"></script>
+<script type="text/javascript" src="js/kThumbnailPicker.js"></script>
+<script type="text/javascript" src="js/kGallery.js"></script>
+
+<h2>Thumbnails only (dataSource: array)</h2>
+<script type="text/javascript">
+    $(document).ready(function() {
+        gallery = kThumbnailPicker({
+            wrapper: '#thumbnails-only',
+            dataType: 'array',
+            startItem: 0,
+            dataSource: [
+                {
+                    "large":"files/365_4.jpg",
+                    "thumb":"files/previews/365_4.jpg",
+                    "title":"First image! + some HTML <a href=\"http://en.wikipedia.org/wiki/HTML\" target=\"_blank\" >HTML</a>"
+                },
+                {
+                    "large":"files/365_5.jpg",
+                    "thumb":"files/previews/365_5.jpg",
+                    "title":"Second image!"
+                },
+                {
+                    "large":"files/365_6.jpg",
+                    "thumb":"files/previews/365_6.jpg",
+                    "title":"Third image!"
+                },
+                {
+                    "large":"files/365_8.jpg",
+                    "thumb":"files/previews/365_8.jpg",
+                    "title":"Fourth image!"
+                },
+                {
+                    "large":"files/365_10.jpg",
+                    "thumb":"files/previews/365_10.jpg",
+                    "title":"Fifth image!"
+                },
+                {
+                    "large":"files/365_11.jpg",
+                    "thumb":"files/previews/365_11.jpg",
+                    "title":"Sixth image!"
+                },
+                {
+                    "large":"files/365_12.jpg",
+                    "thumb":"files/previews/365_12.jpg",
+                    "title":"Seventh image!"
+                },
+                {
+                    "large":"files/365_13.jpg",
+                    "thumb":"files/previews/365_13.jpg",
+                    "title":"Eighth image!"
+                },
+                {
+                    "large":"files/365_15.jpg",
+                    "thumb":"files/previews/365_15.jpg",
+                    "title":"Ninth image!"
+                },
+                {
+                    "large":"files/365_17.jpg",
+                    "thumb":"files/previews/365_17.jpg",
+                    "title":"Tenth image!"
+                },
+                {
+                    "large":"files/365_18.jpg",
+                    "thumb":"files/previews/365_18.jpg",
+                    "title":"Eleventh image!"
+                },
+                {
+                    "large":"files/365_19.jpg",
+                    "thumb":"files/previews/365_19.jpg",
+                    "title":"Twelfth image!"
+                },
+                {
+                    "large":"files/365_20.jpg",
+                    "thumb":"files/previews/365_20.jpg",
+                    "title":"Thirteenth image!"
+                },
+                {
+                    "large":"files/365_21.jpg",
+                    "thumb":"files/previews/365_21.jpg",
+                    "title":"Fourteenth image!"
+                },
+                {
+                    "large":"files/365_22.jpg",
+                    "thumb":"files/previews/365_22.jpg",
+                    "title":"Twelfth image!"
+                },
+                {
+                    "large":"files/365_23.jpg",
+                    "thumb":"files/previews/365_23.jpg",
+                    "title":"Fifteenth image!"
+                },
+                {
+                    "large":"files/365_24.jpg",
+                    "thumb":"files/previews/365_24.jpg",
+                    "title":"Sixteenth image!"
+                },
+                {
+                    "large":"files/365_25.jpg",
+                    "thumb":"files/previews/365_25.jpg"
+                },
+                {
+                    "large":"files/365_26.jpg",
+                    "thumb":"files/previews/365_26.jpg"
+                },
+                {
+                    "large":"files/365_27.jpg",
+                    "thumb":"files/previews/365_27.jpg"
+                },
+                {
+                    "large":"files/365_28.jpg",
+                    "thumb":"files/previews/365_28.jpg"
+                },
+                {
+                    "large":"files/365_30.jpg",
+                    "thumb":"files/previews/365_30.jpg"
+                },
+                {
+                    "large":"files/365_32.jpg",
+                    "thumb":"files/previews/365_32.jpg"
+                },
+                {
+                    "large":"files/365_33.jpg",
+                    "thumb":"files/previews/365_33.jpg"
+                },
+                {
+                    "large":"files/365_35.jpg",
+                    "thumb":"files/previews/365_35.jpg"
+                },
+                {
+                    "large":"files/365_36.jpg",
+                    "thumb":"files/previews/365_36.jpg"
+                },
+                {
+                    "large":"files/365_38.jpg",
+                    "thumb":"files/previews/365_38.jpg"
+                },
+                {
+                    "large":"files/365_39.jpg",
+                    "thumb":"files/previews/365_39.jpg"
+                },
+                {
+                    "large":"files/365_40.jpg",
+                    "thumb":"files/previews/365_40.jpg"
+                }
+            ]
+        });
+    });
+</script>
+<div style="width: 400px;">
+    <div id="thumbnails-only">
+
+    </div>
+</div>
+
+
+</body>
+</html>

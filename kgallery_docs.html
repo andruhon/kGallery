@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Kopolo - full services web development and mobile applications studio. Кополо - веб-разработка интернет сайтов и мобильных приложений" />
+	<meta name="keywords" content="Kopolo web development studio, internet websites, mobile applications, responsive design, HTML, CSS, XML, JavaScript, PHP, Symfony framework, Android specialists, Кополо студия веб разработки, интернет веб-сайты, мобильные приложения, дизайн, резиновая верстка, Андроид" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/kopolo.css" />
+	<title>kGallery Documentation</title>
+</head>
+<body>
+
+	<div id="pagewrapper">
+		<header id='header' class='header'>
+			
+			<a href="/" id='logo'><img src="/i/logo.png" alt='Kopolo_logo'/></a>
+			
+			<figure>
+				<nav>
+					<a href="/en/">Home</a>
+					<a href="/en/portfolio/">Portfolio</a>
+					<a href="/en/contact/">Contact Us</a>
+					<a href="/en/for_webmasters/">For Webmasters</a>
+				</nav>
+			</figure>
+			
+			<div class='clear separator'></div>
+			
+		</header>
+
+		<div id="content">
+			
+			<div class="words_on_page">
+				<h1 class="main_name">kGallery Documentation</h1>
+				<div class="gradient"></div>
+				<div class="separator"></div>
+                
+				<div class="demo_links">
+					<ul>
+						<li><span>Documentation</span></li>
+						<li><a href="https://github.com/andruhon/kGallery">Page on GitHub</a></li>
+						<li><a href="https://github.com/andruhon/kGallery/issues">Report bug</a></li>
+						<li><a href="https://github.com/andruhon/kGallery/tags">Download</a></li>
+					</ul>
+					
+					<h3>kGallery demos</h3>
+					<ul>
+						<li><a href="example_slideshow_only.html">Slideshow only</a></li>
+						<li><a href="example_thumbnails_only.html">Thumbnails only</a></li>
+						<li><a href="example_typical.html">Typical usage</a></li>
+						<li><a href="example_vertical.html">Vertical thumbnails</a></li>
+					</ul>
+				</div>
+				
+				<div class="clear"></div>
+
+                <div style="width: 95%;">
+                
+                <h3>JavaScript and jQuery gallery which able to function efficiently with hundreds of photos.</h3>
+                <p>First significant advantage of this gallery is ability to work stable with hundreds of pictures or with huge pictures without freezing browser. This effect is achieved by retrieving the list of images from the external source (JSON or XML) and downloading pictures gradually while slideshow is playing, not all in once.</p>
+
+                <p>kGallery includes kSlideshow and kThumbnailPicker components, each of them could be used independently.</p>
+                
+                <p><i>
+                Note that this gallery is supposed to work on server not on local computer. Most of browsers will refuse XHR request to JSON list of pictures which is located on local file system (such as file:///C:/gallery/files.json). Try to use <a href="https://github.com/andruhon/kSimpleSlides">kSimpleSlides</a> if you need just simple slideshow which works without JSON and XHR stuff.
+                </i></p>
+                
+                <p>
+                    Do not hesitate to contact author if you have any questions or enquiries about kGallery:<br />
+                    Andrew Kondratev e-mail:<a href="mailto:andr@kopolo.ru">andr@kopolo.ru</a><br />
+                    Andrew speaks Russian and English.
+                </p>
+                
+                <h3>Usage</h3>
+                <ol>
+                    <li>Prepare files to play in slideshow. Place them somewhere on your server. Make sure that files are available to view in browser.</li>
+                    <li>Prepare JSON file with pictures list.<br />
+                    JSON is JavaScript Object Notation, so JSON file is just text file which contains text with following structure:
+<pre>
+<span style='color:#800080; '>{</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>items</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#808030; '>[</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>large</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>web_path_to_picture1.jpg </span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>thumb</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>web_path_to_picture1_thumbnail.jpg</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>title</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>title for first picture</span><span style='color:#800000; '>"</span>
+	<span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>large</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>web_path_to_picture2.jpg </span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>thumb</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>web_path_to_picture2_thumbnail.jpg</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+		<span style='color:#800000; '>"</span><span style='color:#0000e6; '>title</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>title for second</span><span style='color:#800000; '>"</span>
+	<span style='color:#800080; '>}</span>
+	<span style='color:#696969; '>/*, more items*/</span>
+<span style='color:#808030; '>]</span><span style='color:#800080; '>}</span>
+</pre>
+<p>Save this file somwhere on your server with .json extension and make sure that it is available in your browser. Remember web path to this file, you need it for step 6 of this tutorial.</p>
+                    </li>
+                    <li>Include jQuery and kGallery into HTML of your page:
+<pre>
+<span style='color:#a65700; '>&lt;</span><span style='color:#5f5035; '>script</span> <span style='color:#274796; '>type</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>text/javascript</span><span style='color:#0000e6; '>"</span> <span style='color:#274796; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>http://code.jquery.com/jquery-1.7.2.min.js</span><span style='color:#0000e6; '>"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#5f5035; '>script</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#5f5035; '>script</span> <span style='color:#274796; '>type</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>text/javascript</span><span style='color:#0000e6; '>"</span> <span style='color:#274796; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>js/kGallery-full.min.js</span><span style='color:#0000e6; '>"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#5f5035; '>script</span>
+</pre>
+                    </li>
+                    <li>Add some custom styles for your gallery:
+<pre>
+&lt;<span style='color:#800000; font-weight:bold; '>style</span><span style='color:#808030; '>></span>
+<span style='color:#696969; '>/* gallery wrapper dimensions */</span>
+<span style='color:#808030; '>#</span>gallery-wrapper<span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>400</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>400</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>text-align</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>center</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* slide dimensions */</span>
+<span style='color:#808030; '>.</span>kSlideshowWrapper<span style='color:#808030; '>,</span> <span style='color:#808030; '>.</span>kSlideshowItemDiv<span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>400</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>267</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* picture styles */</span>
+<span style='color:#808030; '>.</span>kSlideshowItemDiv <span style='color:#800000; font-weight:bold; '>img</span><span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>z-index</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>400</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* thumbnails wrapper dimensions */</span>
+<span style='color:#808030; '>.</span>kThumbnailsWrapper<span style='color:#800080; '>{</span> 	<span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>324</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>80</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>margin</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>10</span><span style='color:#006600; '>px</span> <span style='color:#074726; '>auto</span> <span style='color:#008c00; '>0</span> <span style='color:#074726; '>auto</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+<span style='color:#808030; '>.</span>kThumbnailsInnerWrapper<span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>height</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>80</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>324</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* thumbnails page dimensions */</span>
+<span style='color:#808030; '>.</span>kThumbnailsPage<span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>width</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>324</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>text-align</span><span style='color:#808030; '>:</span> <span style='color:#074726; '>left</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* thumbnail styles */</span>
+<span style='color:#808030; '>.</span>kThumbnailsPage <span style='color:#800000; font-weight:bold; '>img</span><span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>padding</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>border</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#006600; '>px</span> <span style='color:#074726; '>solid</span> <span style='color:#797997; '>black</span><span style='color:#800080; '>;</span> <span style='color:#bb7977; font-weight:bold; '>margin</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>2</span><span style='color:#006600; '>px</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+
+<span style='color:#696969; '>/* selected thumbnail styles */</span>
+<span style='color:#808030; '>.</span>kThumbnailsPage <span style='color:#808030; '>.</span>selectedThumbnail<span style='color:#800080; '>{</span> <span style='color:#bb7977; font-weight:bold; '>border-color</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>#</span><span style='color:#008000; '>aaaaff</span><span style='color:#800080; '>;</span> <span style='color:#800080; '>}</span>
+&lt;/<span style='color:#800000; font-weight:bold; '>style</span><span style='color:#808030; '>></span>
+</pre>
+                    </li>
+                    
+                    <li>Put gallery wrapper into HTML of your page
+<pre>
+<span style='color:#a65700; '>&lt;</span><span style='color:#5f5035; '>h2</span><span style='color:#a65700; '>></span>Plugin usage of kGallery<span style='color:#a65700; '>&lt;/</span><span style='color:#5f5035; '>h2</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#5f5035; '>div</span> <span style='color:#274796; '>id</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>gallery-wrapper</span><span style='color:#0000e6; '>"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#5f5035; '>div</span><span style='color:#a65700; '>></span>
+</pre>
+                    </li>
+                    <li>Init your kGallery
+<pre>
+<span style='color:#808030; '>&lt;</span>script type<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>text/javascript</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+$<span style='color:#808030; '>(</span>document<span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>ready<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>function</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+    <span style='color:#696969; '>//initializing plugin with url string</span>
+    $<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'#gallery-wrapper'</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>kGallery<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'web_path_to_your_pictures_list.json'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+    
+    <span style='color:#696969; '>/*</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;\\initializing plugin with options object</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;$('#gallery-wrapper').kGallery({</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;dataSource: 'web_path_to_your_pictures_list.json',</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;startItem: 2</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;});</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;*/</span>
+
+    <span style='color:#696969; '>/*</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;\\initializing plugin with options object and array data-source</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;$('#gallery-wrapper').kGallery({</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;dataType: 'array',</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;dataSource:[{</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"large":"img1.jpg",</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"thumb":"img1_sml.jpg",</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"title":"title!"</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;},</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;{</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"large":"img2.jpg",</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"thumb":"img2_sml.jpg",</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;"title":"title2!"</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;}],</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;});</span>
+<span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;*/</span>
+
+    <span style='color:#696969; '>// you can check all possible settings below</span>
+<span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>script<span style='color:#808030; '>></span>
+</pre>
+                    </li>
+                </ol>
+                
+                <h3>Notes</h3>
+                <p>kGallery will destroy previous kGallery instance if you try to initialize it on the wrapper with initialized instance</p>
+                <p>If you try to initialize gallery without options it will return kGallery instance initialized on this wrapper if it is initialized otherwise FALSE.</p>
+                
+                <p>visit <a href="/for_webmasters/kgallery/example_typical.html">demos</a> section for live usage examples.</p>
+                
+                </div>
+				
+				<h3 id='kGallery_header'>kGallery</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Default value</th>
+                            <th>Data&nbsp;type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>wrapper</td>
+                            <td>Gallery wrapper. If collection of elements is given, displays the same slideshow obeying same commands in all wrappers. Calls new kSlideshow to create independent slideshow. </td>
+                            <td>#gallery-wrapper</td>
+                            <td>string or $.object</td>
+                        </tr>
+                        <tr>
+                            <td>dataSource</td>
+                            <td>Url with the data for gallery (JSON usually), see jQuery.ajax() or JavaScript array (should replace dataType to array)</td>
+                            <td>data.json</td>
+                            <td>string | array</td>
+                        </tr>
+                        <tr>
+                            <td>dataType</td>
+                            <td>Data type, see jQuery.ajax() + 'array' option</td>
+                            <td>json</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>startItem</td>
+                            <td>index of initial slide</td>
+                            <td>0</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>slideshowOptions</td>
+                            <td>Additional settings for <a href="#kSlideshow_header">kSlideshow</a></td>
+                            <td></td>
+                            <td>object</td>
+                        </tr>
+                        <tr>
+                            <td>thumbnailPickerOptions</td>
+                            <td>Additional settings for <a href="#kThumbnailPicker_header">kThumbnailPicker</a></td>
+                            <td></td>
+                            <td>object</td>
+                        </tr>
+                        <tr>
+                            <td>wrapperClass</td>
+                            <td>CSS class, which is added to gallery wrapper</td>
+                            <td>kGallery</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>selectedThumbnailClass</td>
+                            <td>CSS class, which is added to selected thumbnail</td>
+                            <td>selectedThumbnail</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>afterInit</td>
+                            <td>Function, which is called after initialization</td>
+                            <td></td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>beforeShow</td>
+                            <td>Function, which is called before displaying of picture</td>
+                            <td>function (itemIndex)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>destroy</td>
+                            <td>Function to destroy kGallery instance</td>
+                            <td>function ()</td>
+                            <td>function</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id='kSlideshow_header'>kSlideshow (for Slideshow only)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Default value</th>
+                            <th>Data&nbsp;type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>wrapper</td>
+                            <td>Slideshow wrapper. If collection of elements is given, displays the same slideshow obeying same commands in all wrappers. Calls new kSlideshow to create independent slideshow</td>
+                            <td>#slideshow-wrapper</td>
+                            <td>string or $.object</td>
+                        </tr>
+                        <tr>
+                            <td>dataSource</td>
+                            <td>Url with the data for gallery (JSON usually), see jQuery.ajax() or JavaScript array (should replace dataType to array)</td>
+                            <td>data.json</td>
+                            <td>string | array</td>
+                        </tr>
+                        <tr>
+                            <td>dataType</td>
+                            <td>Data type, see jQuery.ajax() + 'array' option</td>
+                            <td>json</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>autoPlay</td>
+                            <td>Start slideshow playback automatically</td>
+                            <td>true</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>startItem</td>
+                            <td>index of initial slide</td>
+                            <td>0</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>preloadImagesCount</td>
+                            <td>Number of preloading pictures. Gallery preloads {preloadImagesCount} pictures before and after current slide.</td>
+                            <td>2</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>nextAttempts</td>
+                            <td>Number of attempts before flipping to the next slide (when slideshow is playing).If slide picture is not loaded yet kSlideshow prevents automatic flipping to the next slide {nextAttempts} times. if 0 or 1 is given, flipping automatically without waiting until picture is downloaded.</td>
+                            <td>4</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>interval</td>
+                            <td>Interval between slides flipping, milliseconds</td>
+                            <td>2000</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>fadeDelay</td>
+                            <td>Slides appearance speed, milliseconds</td>
+                            <td>400</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>itemDivClass</td>
+                            <td>CSS class for slides wrappers (adds to item div)</td>
+                            <td>kSlideshowItemDiv</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>enableControls</td>
+                            <td>Create controls automatically</td>
+                            <td>true</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>enableTitle</td>
+                            <td>Turn on displaying of titles</td>
+                            <td>true</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>enableAlt</td>
+                            <td>Turn on adding of alt and title attributes to slideshow images</td>
+                            <td>true</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>displayEmptyTitle</td>
+                            <td>Always display title block even if title is empty</td>
+                            <td>false</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>wrapperClass</td>
+                            <td>CSS class for slideshow wrapper (adds to wrapper)</td>
+                            <td>kSlideshowWrapper</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>playToggleClass</td>
+                            <td>CSS class for "play/pause" toggle (adds to "play/pause" button)</td>
+                            <td>kSlideshowPlayToggle</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>playClass</td>
+                            <td>CSS class for "play" button (adds to "play/pause" button when slideshow is on the pause)</td>
+                            <td>kSlideshowPlay</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>pauseClass</td>
+                            <td>CSS class for "pause" button (adds to "play/pause" button when slideshow is playing)</td>
+                            <td>kSlideshowPause</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>nextClass</td>
+                            <td>CSS class for "next" button (adds to "next" button)</td>
+                            <td>kSlideshowNext</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>prevClass</td>
+                            <td>CSS class for "prev" button (adds to "prev" button)</td>
+                            <td>kSlideshowPrev</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>titleClass</td>
+                            <td>CSS class for title (adds to title block)</td>
+                            <td>kSlideshowTitle</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>controlsInactiveClass</td>
+                            <td>CSS class for inactive controls buttons (adds to inactive controls)</td>
+                            <td>inactive</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>loadedClass</td>
+                            <td>CSS class for downloaded pictures (adds to picture when downloading of it is finished)</td>
+                            <td>loaded</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>afterInit</td>
+                            <td>Function which called after initialization of a slidewhow</td>
+                            <td></td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>beforeShow</td>
+                            <td>Function which called before displaying of a slide (node of a slide can be not created yet if this slide displayed first time). @param integer indexItem - index of current item</td>
+                            <td>function (itemIndex)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>beforeAnimation</td>
+                            <td>Middleware event between beforeShow and afterShow. Function which is called before fadeIn animation when DOM node of slide is created already. @param integer indexItem - index of current item. @param object itemNode - DOM node of the slide.</td>
+                            <td>function (itemIndex, itemNode)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>afterShow</td>
+                            <td>Function which is called when fadeIn animation of the slide is finished</td>
+                            <td></td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>onLoadingError</td>
+                            <td>Function which is called on parsing data error</td>
+                            <td>function (jqXHR, textStatus, errorThrown)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>destroy</td>
+                            <td>Function to destroy kSlideshow instance</td>
+                            <td>function ()</td>
+                            <td>function</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id='kThumbnailPicker_header'>kThumbnailPicker (for Thumbnails only)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Default value</th>
+                            <th>Data&nbsp;type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>wrapper</td>
+                            <td>thumbnails wrappers</td>
+                            <td>#thumbnails-wrapper</td>
+                            <td>string or $.object</td>
+                        </tr>
+                        <tr>
+                            <td>dataSource</td>
+                            <td>Url with the data for gallery (JSON usually), see jQuery.ajax() or JavaScript array (should replace dataType to array)</td>
+                            <td>data.json</td>
+                            <td>string | array</td>
+                        </tr>
+                        <tr>
+                            <td>dataType</td>
+                            <td>Data type, see jQuery.ajax() + 'array' option</td>
+                            <td>json</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>vertical</td>
+                            <td>Vertical scrolling</td>
+                            <td>false</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>itemsOnPage</td>
+                            <td>Number of previews on page. Do not forget to set correct size for the wrapper and the innerWrapper, considering the width, height and number of items on page.</td>
+                            <td>3</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>preloadPagesCount</td>
+                            <td>Number of preloading pages. Only thumbnails for next(and previous) {preloadPagesCount} pages are downloading, When you switching to the next page - thumbnails of next+{preloadPagesCount} page are downloading (if them are not downloaded yet)</td>
+                            <td>2</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>startItem</td>
+                            <td>Index of initial slide. Index of initial page will be calculated automatically.</td>
+                            <td>0</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>wrapperClass</td>
+                            <td>CSS class, which adds to the thumbnails wrapper</td>
+                            <td>kThumbnailsWrapper</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>innerWrapperClass</td>
+                            <td>CSS class, which adds to the thumbnails inner wrapper</td>
+                            <td>kThumbnailsInnerWrapper</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>nextPageClass</td>
+                            <td>CSS class, which adds to next page button</td>
+                            <td>kThumbnailsNextPage</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>prevPageClass</td>
+                            <td>CSS class, which adds to previous page button</td>
+                            <td>kThumbnailsPrevPage</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>controlsInactiveClass</td>
+                            <td>CSS class, which adds to inactive control elements</td>
+                            <td>inactive</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>pageClass</td>
+                            <td>CSS class, which adds to all thumbnails pages</td>
+                            <td>kThumbnailsPage</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>enableControls</td>
+                            <td>Enable auto creation of control elements for thumbnails</td>
+                            <td>true</td>
+                            <td>boolean</td>
+                        </tr>
+                        <tr>
+                            <td>scrollingEffect</td>
+                            <td>Animation effect for pages scrolling: 'slide' or 'fade'</td>
+                            <td>slide</td>
+                            <td>string</td>
+                        </tr>
+                        <tr>
+                            <td>scrollingSpeed</td>
+                            <td>Speed of scrolling, milliseconds</td>
+                            <td>1000</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>afterInit</td>
+                            <td>Function, which is called after initialization of thumbnails</td>
+                            <td></td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>beforeShow</td>
+                            <td>Function, which is called before changing of page. @param boolean nextOrPrev - true is passed if showPage called by instance.next or instance.prev methods.</td>
+                            <td>function (nextOrPrev)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>afterShow</td>
+                            <td>Function, which is called after changing of page. @param boolean nextOrPrev - true is passed if showPage called by instance.next or instance.prev methods</td>
+                            <td>function (nextOrPrev)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>thumbnailClick</td>
+                            <td>Function, which is called on thumbnail click. @param integer itemIndex - index of clicked thumbnail.</td>
+                            <td>function (itemIndex)</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>destroy</td>
+                            <td>Function to destroy kThumbnailPicker instance</td>
+                            <td>function ()</td>
+                            <td>function</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+				
+			</div> <!--end of .words_on_page-->
+			
+			<div class="separator"></div>
+			
+		</div> <!--end of #content-->
+		
+		<div id='feedback_bottom'>
+            
+            <div class="counters">
+                <div class="left">
+                    <!--LiveInternet counter--><script type="text/javascript"><!--
+                    document.write("<a href='http://www.liveinternet.ru/click' "+
+                    "target=_blank><img src='//counter.yadro.ru/hit?t24.6;r"+
+                    escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                    ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                    screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                    ";"+Math.random()+
+                    "' alt='' title='LiveInternet: показано число посетителей за"+
+                    " сегодня' "+
+                    "border='0' width='88' height='15'><\/a>")
+                    //--></script><!--/LiveInternet-->
+                </div>
+            </div>
+            <div class="footer">                
+                &#x00A9; 2007-2013 &laquo;Kopolo&raquo; Ltd. <a href="mailto:info@kopolo.ru"> info@kopolo.ru</a>
+            </div>
+            
+        </div> <!--end of #feedback_bottom-->
+
+	</div> <!--end of #pagewrapper-->
+</body>
+</html>

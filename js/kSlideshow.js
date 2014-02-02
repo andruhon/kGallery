@@ -5,7 +5,7 @@
  * TODO: +0.01 to add possibility of CSS class changing for control elements and title on mouseover (like hover)
  * FIXME: +0.01 escape quotes before setting alt and title attributes for picture
  *
- * @version 1.2.0 / 17.05.2013
+ * @version 1.2.1 / 02.02.2014
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
  *
@@ -15,7 +15,7 @@
 
 function kSlideshow (new_options) {
 
-    kSlideshowVersion = '1.2.0';
+    kSlideshowVersion = '1.2.1';
 
     /**
      * Default options
@@ -31,15 +31,23 @@ function kSlideshow (new_options) {
             wrapper: '#slideshow-wrapper',
 
             /**
+             * Url with the data for gallery (JSON usually) or JavaScript array (should replace dataType to array)
+             * see jQuery.ajax()
+             * var string | array
+             */
+            dataSource: 'data.json',
+
+            /**
              * Url with the data for gallery (JSON usually)
+             * @deprecated use dataSouce instead
              * see jQuery.ajax()
              * var string
              */
-            url: 'data.json',
+            url: undefined,
 
             /**
              * Data type
-             * see jQuery.ajax()
+             * see jQuery.ajax() + 'array' option
              * var string
              */
             dataType: 'json',
@@ -217,7 +225,7 @@ function kSlideshow (new_options) {
     var options;
 
     /**
-     * Array with list of items received from data (see url option)
+     * Array with list of items received from data (see dataSource option)
      * var array
      */
     instance.items = [];
@@ -264,29 +272,7 @@ function kSlideshow (new_options) {
      */
     instance.nextButton;
 
-    /**
-     * "Constructor"
-     */
-    {
-        setOptions(new_options);
-        /*
-         * recieveng the data for slideshow
-         */
-        if (options.url != false) {
-            jQuery.ajax({
-                url: options.url,
-                success: function (data) {
-                    var items = data.items;
-                    if (items.length > 0) {
-                        instance.items = items;
-                        instance.init ();
-                        options.afterInit();
-                    };
-                },error: function (jqXHR, textStatus, errorThrown) {options.onLoadingError(jqXHR, textStatus, errorThrown);},
-                dataType: options.dataType
-            });
-        };
-    };
+    /* see constructor below */
 
     /**
      * megring of user options and default options
@@ -614,6 +600,41 @@ function kSlideshow (new_options) {
     instance.getOptions = function()
     {
         return options;
+    };
+
+    /**
+     * "Constructor"
+     */
+    {
+        if (new_options.url) {
+            /* compatiblity feature */
+            new_options.dataSource = new_options.url;
+        }
+
+        setOptions(new_options);
+        /*
+         * recieveng the data for slideshow
+         */
+        if (options.dataSource != false) {
+            if (options.dataType=='array') {
+                instance.items = options.dataSource;
+                instance.init ();
+                options.afterInit();
+            } else {
+                jQuery.ajax({
+                    url: options.dataSource,
+                    success: function (data) {
+                        var items = data.items;
+                        if (items.length > 0) {
+                            instance.items = items;
+                            instance.init ();
+                            options.afterInit();
+                        };
+                    },error: function (jqXHR, textStatus, errorThrown) {options.onLoadingError(jqXHR, textStatus, errorThrown);},
+                    dataType: options.dataType
+                });
+            }
+        };
     };
 
     return instance;

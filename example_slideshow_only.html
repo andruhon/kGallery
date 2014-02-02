@@ -20,7 +20,7 @@
         z-index: 400;
     }
 </style>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/kGallery-full.min.js"></script>
 
 <h2>Slideshow only  (kSlideshow)</h2>
@@ -28,7 +28,7 @@
     $(document).ready(function() {
         gallery = kSlideshow({
             wrapper: '#slideshow-only',
-            url: 'files/gallery.json',
+            dataSource: 'files/gallery.json',
             autoPlay: false, //autoplayback is turned off
             enableTitle: false, //images titles is turned off
             startItem: 0

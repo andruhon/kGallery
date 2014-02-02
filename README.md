@@ -15,6 +15,11 @@ Nearest analog is dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.S
 3. Thumbnails only http://kopolo.ru/for_webmasters/kgallery/example_thumbnails_only.html
 4. Gallery with vertical previews http://kopolo.ru/for_webmasters/kgallery/example_vertical.html
 
+Array as data source:
+5. Typical usage http://kopolo.ru/for_webmasters/kgallery/example_typical_array.html
+6. Slideshow only http://kopolo.ru/for_webmasters/kgallery/example_slideshow_only_array.html
+7. Thumbnails only http://kopolo.ru/for_webmasters/kgallery/example_thumbnails_only_array.html
+
 One real life example: http://foto-dv.ru/en/
 
 Documentation is coming soon. Now you can check all parameters in "defaults" object of every componnent, all variables and methods are well commented.

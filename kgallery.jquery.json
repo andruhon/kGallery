@@ -1,7 +1,7 @@
 {
     "name": "kgallery",
     "title": "kgallery",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "JavaScript gallery which is able to work efficiently with hundreds of pictures",
     "author": {
         "name": "Andrew Kondratev",

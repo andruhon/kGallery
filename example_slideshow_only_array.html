@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Slideshow only (kSlideshow, dataSource: array)</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="css/kGallery.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="../kgallery-demo/css/kGallery_ie6.css"/>
+<![endif]-->
+<style>
+    .kSlideshowWrapper, .kSlideshowItemDiv{
+        width: 400px;
+        height: 267px;
+    }
+    .kSlideshowItemDiv img{
+        z-index: 400;
+    }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!--script type="text/javascript" src="js/kGallery-full.min.js"></script-->
+<script type="text/javascript" src="js/kSlideshow.js"></script>
+<script type="text/javascript" src="js/kThumbnailPicker.js"></script>
+<script type="text/javascript" src="js/kGallery.js"></script>
+
+<h2>Slideshow only (kSlideshow, dataSource: array)</h2>
+<script type="text/javascript">
+    $(document).ready(function() {
+        gallery = kSlideshow({
+            wrapper: '#slideshow-only',
+            autoPlay: false, //autoplayback is turned off
+            enableTitle: false, //images titles is turned off
+            startItem: 0,
+            dataType: 'array',
+            dataSource: [
+                {
+                    "large":"files/365_4.jpg",
+                    "thumb":"files/previews/365_4.jpg",
+                    "title":"First image! + some HTML <a href=\"http://en.wikipedia.org/wiki/HTML\" target=\"_blank\" >HTML</a>"
+                },
+                {
+                    "large":"files/365_5.jpg",
+                    "thumb":"files/previews/365_5.jpg",
+                    "title":"Second image!"
+                },
+                {
+                    "large":"files/365_6.jpg",
+                    "thumb":"files/previews/365_6.jpg",
+                    "title":"Third image!"
+                },
+                {
+                    "large":"files/365_8.jpg",
+                    "thumb":"files/previews/365_8.jpg",
+                    "title":"Fourth image!"
+                },
+                {
+                    "large":"files/365_10.jpg",
+                    "thumb":"files/previews/365_10.jpg",
+                    "title":"Fifth image!"
+                },
+                {
+                    "large":"files/365_11.jpg",
+                    "thumb":"files/previews/365_11.jpg",
+                    "title":"Sixth image!"
+                },
+                {
+                    "large":"files/365_12.jpg",
+                    "thumb":"files/previews/365_12.jpg",
+                    "title":"Seventh image!"
+                },
+                {
+                    "large":"files/365_13.jpg",
+                    "thumb":"files/previews/365_13.jpg",
+                    "title":"Eighth image!"
+                },
+                {
+                    "large":"files/365_15.jpg",
+                    "thumb":"files/previews/365_15.jpg",
+                    "title":"Ninth image!"
+                },
+                {
+                    "large":"files/365_17.jpg",
+                    "thumb":"files/previews/365_17.jpg",
+                    "title":"Tenth image!"
+                },
+                {
+                    "large":"files/365_18.jpg",
+                    "thumb":"files/previews/365_18.jpg",
+                    "title":"Eleventh image!"
+                },
+                {
+                    "large":"files/365_19.jpg",
+                    "thumb":"files/previews/365_19.jpg",
+                    "title":"Twelfth image!"
+                },
+                {
+                    "large":"files/365_20.jpg",
+                    "thumb":"files/previews/365_20.jpg",
+                    "title":"Thirteenth image!"
+                },
+                {
+                    "large":"files/365_21.jpg",
+                    "thumb":"files/previews/365_21.jpg",
+                    "title":"Fourteenth image!"
+                },
+                {
+                    "large":"files/365_22.jpg",
+                    "thumb":"files/previews/365_22.jpg",
+                    "title":"Twelfth image!"
+                },
+                {
+                    "large":"files/365_23.jpg",
+                    "thumb":"files/previews/365_23.jpg",
+                    "title":"Fifteenth image!"
+                },
+                {
+                    "large":"files/365_24.jpg",
+                    "thumb":"files/previews/365_24.jpg",
+                    "title":"Sixteenth image!"
+                },
+                {
+                    "large":"files/365_25.jpg",
+                    "thumb":"files/previews/365_25.jpg"
+                },
+                {
+                    "large":"files/365_26.jpg",
+                    "thumb":"files/previews/365_26.jpg"
+                },
+                {
+                    "large":"files/365_27.jpg",
+                    "thumb":"files/previews/365_27.jpg"
+                },
+                {
+                    "large":"files/365_28.jpg",
+                    "thumb":"files/previews/365_28.jpg"
+                },
+                {
+                    "large":"files/365_30.jpg",
+                    "thumb":"files/previews/365_30.jpg"
+                },
+                {
+                    "large":"files/365_32.jpg",
+                    "thumb":"files/previews/365_32.jpg"
+                },
+                {
+                    "large":"files/365_33.jpg",
+                    "thumb":"files/previews/365_33.jpg"
+                },
+                {
+                    "large":"files/365_35.jpg",
+                    "thumb":"files/previews/365_35.jpg"
+                },
+                {
+                    "large":"files/365_36.jpg",
+                    "thumb":"files/previews/365_36.jpg"
+                },
+                {
+                    "large":"files/365_38.jpg",
+                    "thumb":"files/previews/365_38.jpg"
+                },
+                {
+                    "large":"files/365_39.jpg",
+                    "thumb":"files/previews/365_39.jpg"
+                },
+                {
+                    "large":"files/365_40.jpg",
+                    "thumb":"files/previews/365_40.jpg"
+                }
+            ]
+        });
+    });
+</script>
+<div id="slideshow-only">
+
+</div>
+
+<h2>JavaScript</h2>
+<div class="javascript"><ol><li class="li1"><div class="de1">$<span class="br0">(</span>document<span class="br0">)</span>.<span class="me1">ready</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; gallery <span class="sy0">=</span> kSlideshow<span class="br0">(</span><span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; wrapper<span class="sy0">:</span> <span class="st0">'#slideshow-only'</span><span class="sy0">,</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dataType<span class="sy0">:</span> <span class="st0">'array'</span><span class="sy0">,</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dataSource<span class="sy0">:</span> <span class="st0">[{
+                    "large":"img1.jpg",
+                    "thumb":"img1_sml.jpg",
+                    "title":"title!"
+                },
+                {
+                    "large":"img2.jpg",
+                    "thumb":"img2_sml.jpg",
+                    "title":"title2!"
+                }]</span><span class="sy0">,</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; autoPlay<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span> <span class="co1">//autoplayback is turned off</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enableTitle<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span> <span class="co1">//images titles is turned off</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; startItem<span class="sy0">:</span> <span class="nu0">0</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1"><span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+</ol></div>
+
+<h2>HTML</h2>
+<div class="html4strict"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">"slideshow-only"</span>&gt;</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+<li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li>
+</ol></div>
+
+<h2>CSS</h2>
+<div class="css"><ol><li class="li1"><div class="de1"><span class="re1">.kSlideshowWrapper</span><span class="sy0">,</span> .kSlideshowItemDiv<span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">width</span><span class="sy0">:</span> <span class="re3">400px</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">height</span><span class="sy0">:</span> <span class="re3">267px</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1"><span class="br0">}</span></div></li>
+<li class="li1"><div class="de1"><span class="re1">.kSlideshowItemDiv</span> img<span class="br0">{</span></div></li>
+<li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">400</span><span class="sy0">;</span></div></li>
+<li class="li1"><div class="de1"><span class="br0">}</span></div></li>
+<li class="li1"><div class="de1">&nbsp;</div></li>
+</ol></div>
+
+</body>
+</html>

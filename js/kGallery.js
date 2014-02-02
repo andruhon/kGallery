@@ -1,18 +1,18 @@
 /**
  * kGallery
  *
- * @version 1.1.0 / 17.05.2013
+ * @version 1.1.1 / 02.02.2014
  * @author Andrew Kondratev [andr@kopolo.ru]
  * @requires jQuery JavaScript Library > v1.3.2
- * @requires kSlideshow >= 1.2.0
- * @requires kThumbnailPicker >= 1.1.0
+ * @requires kSlideshow >= 1.2.1
+ * @requires kThumbnailPicker >= 1.1.1
  *
  * Dual licensed under MIT and GPL 2+ licenses
  * https://github.com/andruhon/kGallery
  */
 function kGallery(new_options) {
 
-    window.kGalleryVersion = '1.1.0';
+    window.kGalleryVersion = '1.1.1';
 
     /**
      * Default options
@@ -28,15 +28,23 @@ function kGallery(new_options) {
             wrapper: '#gallery-wrapper',
 
             /**
+             * Url with the data for gallery (JSON usually) or JavaScript array (should replace dataType to array)
+             * see jQuery.ajax()
+             * var string | array
+             */
+            dataSource: 'data.json',
+
+            /**
              * Url with the data for gallery (JSON usually)
+             * @deprecated use dataSouce instead
              * see jQuery.ajax()
              * var string
              */
-            url: 'data.json',
+            url: undefined,
 
             /**
              * Data type
-             * see jQuery.ajax()
+             * see jQuery.ajax() + 'array' option
              * var string
              */
             dataType: 'json',
@@ -102,7 +110,7 @@ function kGallery(new_options) {
     instance.index = null;
 
     /**
-     * Array with list of items received from data (see url option)
+     * Array with list of items received from data (see dataSource option)
      * var array
      */
     instance.items = [];
@@ -131,37 +139,7 @@ function kGallery(new_options) {
      */
     instance.lastThumbnail;
 
-    /**
-     * "Constructor"
-     */
-    {
-        if (typeof new_options === 'string' || new_options instanceof jQuery || (typeof new_options === 'object' && new_options.nodeType) ) {
-            /* try to find existing instance if options is only CSS seletor jQuery object or HTMLElement */
-            var prevInstance = jQuery(new_options).data('kGalleryInstance');
-            if (prevInstance) {
-                /* return instance if it is found */
-                return prevInstance;
-            }
-        }
-        if (typeof new_options !== 'object' || !new_options.url) {
-            /* now you cannot initialize kGallery without url */
-            return false;
-        }
-        setOptions(new_options);
-        /*
-         * recieveng the data for slideshow
-         */
-        jQuery.ajax({
-            url: options.url,
-            success: function (data) {
-                var items = data.items;
-                instance.items = items;
-                instance.init ();
-                options.afterInit();
-            },
-            dataType: options.dataType
-        });
-    };
+    /* see constructor below */
 
     /**
      * megring of user options and default options
@@ -200,7 +178,7 @@ function kGallery(new_options) {
     instance.initThumbnailPicker = function () {
         /* general options for thumbnails */
         var thumbnailPickerDefaults = {
-                url: false,
+                dataSource: false,
                 startItem: options.startItem
         };
         if (!options.thumbnailPickerOptions.wrapper){
@@ -238,7 +216,7 @@ function kGallery(new_options) {
     instance.initSlideshow = function () {
         /* general slidesohw options */
         var slideshowDefaults = {
-                url: false,
+                dataSource: false,
                 startItem: options.startItem
         };
         if (!options.slideshowOptions.wrapper) {
@@ -278,6 +256,50 @@ function kGallery(new_options) {
     instance.destroy = function() {
         instance.slideshow.destroy();
         instance.thumbnailPicker.destroy();
+    };
+
+    /**
+     * "Constructor"
+     */
+    {
+        if (typeof new_options === 'string' || new_options instanceof jQuery || (typeof new_options === 'object' && new_options.nodeType) ) {
+            /* try to find existing instance if options is only CSS seletor jQuery object or HTMLElement */
+            var prevInstance = jQuery(new_options).data('kGalleryInstance');
+            if (prevInstance) {
+                /* return instance if it is found */
+                return prevInstance;
+            }
+        }
+
+        if (new_options.url) {
+            /* compatibility feature url=>dataSource */
+            new_options.dataSource = new_options.url;
+        }
+
+        if (typeof new_options !== 'object' || !new_options.dataSource) {
+            /* now you cannot initialize kGallery without dataSource */
+            return false;
+        }
+        setOptions(new_options);
+        /*
+         * recieveng the data for slideshow
+         */
+        if (options.dataType=='array') {
+            instance.items = options.dataSource;
+            instance.init ();
+            options.afterInit();
+        } else {
+            jQuery.ajax({
+                url: options.dataSource,
+                success: function (data) {
+                    var items = data.items;
+                    instance.items = items;
+                    instance.init ();
+                    options.afterInit();
+                },
+                dataType: options.dataType
+            });
+        }
     };
 
     return instance;
