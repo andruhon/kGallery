@@ -39,3 +39,6 @@ kGallery - это галерея написанная на JavaScript с исп�
 Ближайший аналог dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.SlideShow), однако kGallery не требует подключения к сайту мегабайтов кода библиотеки dojo и лучше настраивается.
 
 kGallery включает компоненты kSlideshow и kThumbnailPicker, которые могут быть использованы самостоятельно.
+
+##Donate
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VJ96HT7K6DUPQ
