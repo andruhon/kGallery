@@ -40,5 +40,6 @@ kGallery - это галерея написанная на JavaScript с исп�
 
 kGallery включает компоненты kSlideshow и kThumbnailPicker, которые могут быть использованы самостоятельно.
 
-##Donate
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VJ96HT7K6DUPQ
+##Donate / help
+I don't ask for a donation, but you can join me on the Linked in and endorse my JavaScript skill if you find this gallery useful:
+https://nz.linkedin.com/pub/andrei-kondratev/51/445/635
