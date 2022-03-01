@@ -1,4 +1,6 @@
-#JavaScript gallery which can efficiently work with hundreds of photos.
+This library is no longer actively maintained. Please contact author in the case you want to take ownership of this library. 
+
+# JavaScript gallery which can efficiently work with hundreds of photos.
 
 **kGallery is a gallery written on JavaScript using jQuery library.**
 
