@@ -10,36 +10,13 @@ Nearest analog is dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.S
 **kGallery includes kSlideshow and kThumbnailPicker componnents, which can used independently.**
 
 ####Examples of usage:
-1. Typical usage http://kopolo.ru/for_webmasters/kgallery/example_typical.html
-2. Slideshow only http://kopolo.ru/for_webmasters/kgallery/example_slideshow_only.html
-3. Thumbnails only http://kopolo.ru/for_webmasters/kgallery/example_thumbnails_only.html
-4. Gallery with vertical previews http://kopolo.ru/for_webmasters/kgallery/example_vertical.html
+1. Typical usage https://andruhon.github.io/kGallery/example_typical.html
+2. Slideshow only https://andruhon.github.io/kGallery/example_slideshow_only.html
+3. Thumbnails only https://andruhon.github.io/kGallery/example_thumbnails_only.html
+4. Gallery with vertical previews https://andruhon.github.io/kGallery/example_vertical.html
 
 Array as data source:
 
-5. Typical usage http://kopolo.ru/for_webmasters/kgallery/example_typical_array.html
-6. Slideshow only http://kopolo.ru/for_webmasters/kgallery/example_slideshow_only_array.html
-7. Thumbnails only http://kopolo.ru/for_webmasters/kgallery/example_thumbnails_only_array.html
-
-One real life example: http://foto-dv.ru/en/
-
-Documentation is coming soon. Now you can check all parameters in "defaults" object of every componnent, all variables and methods are well commented.
-
-
-##По русски (in Russian)
-
-JavaScript галерея, которая может эффективно работать с сотнями фотографий
-
-kGallery - это галерея написанная на JavaScript с использованием библиотеки jQuery.
-
-Преимущество kGallery заключается в том, что галерея стабильно работает с сотнями изображений, либо с большими изображениями.
-Эффект достигается за счет того, что список изображений и их миниатюр запрашивается из внешнего источника в виде JSON или XML, изображения загружаются не все сразу, а постепенно, по мере воспроизведения слайдшоу.
-
-
-Ближайший аналог dojox.image.Gallery (dojox.image.ThumbnailPicker+dojox.image.SlideShow), однако kGallery не требует подключения к сайту мегабайтов кода библиотеки dojo и лучше настраивается.
-
-kGallery включает компоненты kSlideshow и kThumbnailPicker, которые могут быть использованы самостоятельно.
-
-##Donate / help
-I don't ask for a donation, but you can join me on the Linked in and endorse my JavaScript skill if you find this gallery useful:
-https://nz.linkedin.com/pub/andrei-kondratev/51/445/635
+5. Typical usage https://andruhon.github.io/kGallery/example_typical_array.html
+6. Slideshow only https://andruhon.github.io/kGallery/example_slideshow_only_array.html
+7. Thumbnails only https://andruhon.github.io/kGallery/example_thumbnails_only_array.html
