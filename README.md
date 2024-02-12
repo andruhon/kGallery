@@ -1,3 +1,5 @@
+# This repository is archived
+
 This library is no longer actively maintained. Please contact author in the case you want to take ownership of this library. 
 
 # JavaScript gallery which can efficiently work with hundreds of photos.
